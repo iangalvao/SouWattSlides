@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Custom Slideshow</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            background: black;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="slide" src="slide1.png" alt="Slideshow" />
+
+    <script>
+        const slides = ["slide1.png", "slide2.png", "slide3.png", "slide4.png", "slide5.png"];
+        let index = 0;
+        const img = document.getElementById("slide");
+
+        setInterval(() => {
+            index = (index + 1) % slides.length;
+            img.src = slides[index];
+        }, 5000); // Change every 5 seconds
+    </script>
+</body>
+
+</html>
