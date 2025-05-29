@@ -56,6 +56,7 @@ if [ "$(whoami)" = "$USER_NAME" ]; then
   echo "🟢 Habilitando e iniciando o serviço..."
   systemctl --user enable $SERVICE_NAME
   systemctl --user start $SERVICE_NAME
+  echo "✅ Serviço configurado com sucesso!"
 else
   echo "⚠️ Você não está logado como $USER_NAME, portanto o serviço do usuário não foi ativado agora."
   echo "👉 Para finalizar, entre como $USER_NAME e rode:"
