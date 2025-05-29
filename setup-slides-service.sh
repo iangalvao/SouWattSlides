@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-USER_NAME="ian"
-USER_HOME="/home/ian"
-APP_DIR="/home/ian/ian/expo/SouWattSlides"
+# Detect user info and working dir
+USER_NAME="$(whoami)"
+USER_HOME="$HOME"
+APP_DIR="$(pwd)"
 USER_SYSTEMD_DIR="$USER_HOME/.config/systemd/user"
 SERVICE_NAME="SouWattSlides.service"
 PORT=5176
